@@ -6,4 +6,5 @@ To get the icons to load in-game, download the .vtf and .vmt for that icon and p
 Then type hud_reloadscheme in console.
 
 Have questions? Message @keimer on the community Discord, "LazyPurple's Silly Server Discord".
+
 **Friend and message requests are automatically parsed and ignored. Please directly communicate in #mann-vs-machine instead.**
