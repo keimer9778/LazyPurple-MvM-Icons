@@ -1,3 +1,4 @@
+# Foreword
 Normal, Intermediate, Advanced, and Expert are intended for 6 players.
 Some of these missions may not be balanced for 6 players despite being
 labeled as Expert; this is in large part due to these missions being
