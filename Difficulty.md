@@ -5,7 +5,7 @@ Some of these missions may not be balanced for 6 players despite being labeled a
 
 this is in large part due to these missions being playtested with 20 players and Diffmod
 
-in mind.
+in mind.<br>
 
 
 
