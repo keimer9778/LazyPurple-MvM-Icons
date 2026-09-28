@@ -398,12 +398,12 @@ population
 			}
 			ItemAttributes
 			{
-			ItemName	"The Reserve Shooter"
-			"bullets per shot bonus"	3
-			"damage bonus"	0.9
-			"fire rate bonus"	0.5
-			"faster reload rate"	0.5
-			"damage causes airblast"	1
+				ItemName	"The Reserve Shooter"
+				"bullets per shot bonus"	3
+				"damage bonus"	0.9
+				"fire rate bonus"	0.5
+				"faster reload rate"	0.5
+				"damage causes airblast"	1
 			}
 			ItemAttributes
 			{
@@ -574,60 +574,55 @@ population
 			}
 		}
 
-						Phlog_Pyro
-				{
-							ClassIcon	pyro_phlog_v2
-							Health	175
-							Name	"Phlog Pyro"
-							Class	Pyro
-							Skill	Expert
-							WeaponRestrictions	PrimaryOnly
-							Attributes	"SpawnWithFullCharge"
-							CharacterAttributes
-							{
-								"increase buff duration HIDDEN" 2
-								"damage force reduction"	0.5
-								"airblast vulnerability multiplier"	0.5
-							}
-							Taunt [$SIGSEGV]  //Taunt periodically
-					{
-						Delay 1 //Time before the first taunt starts (Default: 10)
-						Cooldown 1 //Time between each taunt (Default: 10)
-						Repeats 1 //How many times the bot should taunt in total (Default: 0 - Infinite)
-						Duration 5 //Duration of a looping taunt (Default: 0.1)
-						// Name "Taunt: Kazotsky Kick" //If set, uses this item taunt instead of default
-						IfSeeTarget 0 //When set to 1, this task activates only when the bot can see the target player (Default 0 - Always activate)
-						IfLeftSpawn 1 // When set to 1, this task activates only when the bot has left the spawn
-						// IfNoTarget 1 //When set to 1, this task activates only when the bot does not have a target (Default 0 - Always activate)
-						//IfHealthBelow 100 //When set, the task activates only when the bot health is below specified value
-						//IfHealthAbove 100 //When set, the task activates only when the bot health is above specified value
-						MaxTargetRange 900 // If set, the task activates only when the target is within specified units away
-						// MinTargetRange 50 // If set, the task activates only when the target is more than specified units away
-					}
-							Item	"The Phlogistinator"
-							Item	"A Head Full of Hot Air"
-						}
-				Heavy_Conch_Armored
-				{
-					Name "Armored Conch Heavy"
-					Health	1100
-					Scale	1.4
-					Class Heavyweapons
-					ClassIcon Heavy_conch_lite
-					Skill Expert
-					Item	"The Concheror"
-					WeaponRestrictions PrimaryOnly
-					Attributes	"SpawnWithFullCharge"
-					CharacterAttributes
-					{
-						"increase buff duration HIDDEN"	15
-						"damage force reduction"	0.4
-						"airblast vulnerability multiplier"	0.4
-						"move speed bonus" 0.8
-						"damage bonus" 1.2
-					}
-					Item	"EOTL_Flat_cap"
-				}
+		Phlog_Pyro
+		{
+			ClassIcon	pyro_phlog_v2
+			Health	175
+			Name	"Phlog Pyro"
+			Class	Pyro
+			Skill	Expert
+			WeaponRestrictions	PrimaryOnly
+			Attributes	"SpawnWithFullCharge"
+			CharacterAttributes
+			{
+				"increase buff duration HIDDEN" 2
+				"damage force reduction"	0.5
+				"airblast vulnerability multiplier"	0.5
+			}
+			Taunt [$SIGSEGV]  //Taunt periodically
+			{
+				Delay 1 //Time before the first taunt starts (Default: 10)
+				Cooldown 1 //Time between each taunt (Default: 10)
+				Repeats 1 //How many times the bot should taunt in total (Default: 0 - Infinite)
+				Duration 5 //Duration of a looping taunt (Default: 0.1)
+				IfSeeTarget 0 //When set to 1, this task activates only when the bot can see the target player (Default 0 - Always activate)
+				IfLeftSpawn 1 // When set to 1, this task activates only when the bot has left the spawn
+				MaxTargetRange 900 // If set, the task activates only when the target is within specified units away
+			}
+			Item	"The Phlogistinator"
+			Item	"A Head Full of Hot Air"
+		}
+		Heavy_Conch_Armored
+		{
+			Name "Armored Conch Heavy"
+			Health	1100
+			Scale	1.4
+			Class Heavyweapons
+			ClassIcon Heavy_conch_lite
+			Skill Expert
+			Item	"The Concheror"
+			WeaponRestrictions PrimaryOnly
+			Attributes	"SpawnWithFullCharge"
+			CharacterAttributes
+			{
+				"increase buff duration HIDDEN"	15
+				"damage force reduction"	0.4
+				"airblast vulnerability multiplier"	0.4
+				"move speed bonus" 0.8
+				"damage bonus" 1.2
+			}
+			Item	"EOTL_Flat_cap"
+		}
 				Minigun_Juggernaut
 				{
 					Name "Minigun Juggernaut"
