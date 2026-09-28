@@ -4147,6 +4147,79 @@ population
 			Item	"Flatliner"
 			Item	"dec2014 Surgeon's Shako"
 		}
+		Scout_Public_Enemey_Armored
+		{
+			ClassIcon	scout_publicenemy_armored_v2
+			Health	900
+			Name	"Armored Public Enemy Scout"
+			Class	Scout
+			Scale	1.4
+			Skill	Hard
+			WeaponRestrictions	PrimaryOnly
+			Item	"Baby Face's Blaster"
+			Item	"The Fed-Fightin' Fedora"
+			ItemAttributes
+			{
+				ItemName	"Baby Face's Blaster"
+				"bullets per shot bonus" 2
+				"damage bonus"	2.2
+				"faster reload rate"	0.5
+			}
+			CharacterAttributes
+			{
+				"damage force reduction"	0.4
+				"airblast vulnerability multiplier"	0.4
+			}
+		}
+		Scout_Public_Enemey_Armored_Tough
+		{
+			ClassIcon	scout_publicenemy_armored_v2
+			Health	1600
+			Name	"smth smth public"
+			Class	Scout
+			Scale	1.4
+			Skill	Hard
+			WeaponRestrictions	PrimaryOnly
+			Item	"Baby Face's Blaster"
+			Item	"The Fed-Fightin' Fedora"
+			ItemAttributes
+			{
+				ItemName	"Baby Face's Blaster"
+				"bullets per shot bonus" 2
+				"damage bonus"	2.2
+				"faster reload rate"	0.5
+			}
+			CharacterAttributes
+			{
+				"damage force reduction"	0.4
+				"airblast vulnerability multiplier"	0.4
+			}
+		}
+		Sniper_Railcanon
+		{
+			ClassIcon	sniper_headshot_deadly
+			Health	125
+			Name	"Railcanon Sniper"
+			Class	Sniper
+			Skill	Expert
+			ItemAttributes
+			{
+				ItemName	"Shooting Star"
+				"dmg penalty vs players"	4
+				"override projectile type"	13
+				"fire rate bonus"	2.5
+				"mod projectile heat seek power" 150
+				"mod projectile heat aim time" 2
+				"mod projectile heat aim error" 170
+
+			}
+			CharacterAttributes
+			{
+				"damage force reduction"	0.5
+				"airblast vulnerability multiplier"	0.5
+			}
+			Item	"Shooting Star"
+		}
 	}
 	Mission
 	{
