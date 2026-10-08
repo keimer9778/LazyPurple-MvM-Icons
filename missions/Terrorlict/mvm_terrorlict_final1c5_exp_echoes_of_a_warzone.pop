@@ -61,6 +61,8 @@ Oh_Dios_Mio_Es_Eso_Una_Pizza_Tower_Referencia
 	PrecacheModel	"models/ctf2w/weapons/c_models/c_spitfire_rocketlauncher/c_spitfire_rocketlauncher.mdl"
 	PrecacheModel	"models/ctf2w/weapons/c_models/c_spitfire_rocketlauncher/w_rocket_spitfire.mdl"
 
+    PrecacheModel "models/weapons/c_models/c_the_bolshevik_bomber/c_the_bolshevik_bomber_1.mdl"
+
 	PrecacheModel	"models/weapons/c_models/c_solar_carbonizer/c_solar_carbonizer.mdl"
 	PrecacheModel	"models/weapons/c_models/c_calefactor/c_calefactor.mdl"
 
@@ -3869,7 +3871,7 @@ Oh_Dios_Mio_Es_Eso_Una_Pizza_Tower_Referencia
             WaitBeforeStarting 0
             WaitBetweenSpawns 1
 
-            Disabled 1
+            StartDisabled 1
 
             TotalCurrency 50
 

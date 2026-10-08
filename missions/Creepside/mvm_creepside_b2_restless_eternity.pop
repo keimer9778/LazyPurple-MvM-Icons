@@ -623,32 +623,9 @@ population
 			}
 			Item	"EOTL_Flat_cap"
 		}
-				Minigun_Juggernaut
-				{
-					Name "Minigun Juggernaut"
-					Health	2400
-					Scale	1.5
-					Class Heavyweapons
-					ClassIcon Heavy_chief_minigun
-					Skill Expert
-					Item	"War Head"
-					WeaponRestrictions PrimaryOnly
-					ItemAttributes
-					{
-						ItemName	"TF_WEAPON_MINIGUN"
-						"damage bonus" 2
-						"fire rate bonus" 0.2
-						"heal on kill" 1000
-					}
-					CharacterAttributes
-					{
-						"damage force reduction"	0.3
-						"airblast vulnerability multiplier"	0.3
-						"move speed bonus" 0.8
-					}
-				}
-			Armored_Engie
-			{
+
+		Armored_Engie
+		{
 			Class Engineer
 			Name "Armored Engineer"
 			ClassIcon engineer_armored
@@ -658,15 +635,15 @@ population
 			Health 1400
 			Attributes TeleportToHint
 			CharacterAttributes
-							{
-								"damage force reduction"	0.4
-								"move speed bonus"	0.7
-								"airblast vulnerability multiplier"	0.4
-								"engy building health bonus" 3
-							}
-			}
-			Overclock_Engie
 			{
+				"damage force reduction"	0.4
+				"move speed bonus"	0.7
+				"airblast vulnerability multiplier"	0.4
+				"engy building health bonus" 3
+			}
+		}
+		Overclock_Engie
+		{
 			Class Engineer
 			Name "Overclock Engineer"
 			ClassIcon engineer_overclocked
@@ -687,9 +664,9 @@ population
 				"damage force reduction"	0.5
 				"airblast vulnerability multiplier"	0.5
 			}
-			}
-			Giant_Overclock_Engie
-			{
+		}
+		Giant_Overclock_Engie
+		{
 			Class Engineer
 			Name "Giant Overclock Engineer"
 			ClassIcon engineer_overclocked
@@ -712,409 +689,158 @@ population
 				"airblast vulnerability multiplier"	0.1
 				"engy building health bonus" 4
 			}
-			}
-			Titanium_Overclock_Engie
-			{
-			Class Engineer
-			Name "Titanium Overclock Engineer"
-			ClassIcon engineer_overclocked
-			Skill Expert
-			TeleportWhere spawnbot
-			Health 8500
-			Attributes	"MiniBoss"
-			Attributes TeleportToHint
-			Item	"The Jag"
+		}
+		Scout_Public_Enemey_buff
+		{
+			ClassIcon	scout_publicenemy
+			Health	125
+			Name	"Buff Public Enemy Scout"
+			Class	Scout
+			Skill	Hard
+			WeaponRestrictions	PrimaryOnly
+			Attributes	"SpawnWithFullCharge"
+			Item	"Baby Face's Blaster"
+			Item	"The Fed-Fightin' Fedora"
+			Item	"The Buff Banner"
 			ItemAttributes
 			{
-				ItemName	"The Jag"
-				"melee attack rate bonus" 0.8
+				ItemName	"Baby Face's Blaster"
+				"bullets per shot bonus" 2
+				"damage bonus"	2
+				"faster reload rate"	0.7
 			}
 			CharacterAttributes
 			{
-				"move speed bonus" 0.75
-				"build rate bonus" 0.1
-				"damage force reduction"	0.05
-				"airblast vulnerability multiplier"	0.05
-				"engy building health bonus" 4
+				"damage force reduction"	0.5
+				"move speed bonus"	1.2
+				"airblast vulnerability multiplier"	0.5
+				"increase buff duration HIDDEN"	15
 			}
-			}
-			Hyper_Engie
+		}
+		Armored_HW_Pyro
+		{
+			ClassIcon	pyro_homewrecker_Lite_armored
+			Health	1200
+			Scale	1.6
+			Name	"Armored Wrecker Pyro"
+			Class	Pyro
+			Skill	Expert
+			WeaponRestrictions	MeleeOnly
+			Item	"The Homewrecker"
+			Item	"The Bolted Birdcage"
+			ItemAttributes
 			{
-			Class Engineer
-			Name "Hyper Engineer"
-			ClassIcon engineer_hyper
-			Skill Expert
-			TeleportWhere spawnbot
-			Health 600
-			Attributes TeleportToHint
+				ItemName	"The Homewrecker"
+				"damage bonus"	1.5
+				"damage blast push"	1
+				"damage causes airblast"	1
+				"airblast pushback scale"	3
+				"dmg bonus vs buildings"	4
+			}
 			CharacterAttributes
 			{
-				"move speed bonus" 1.2
-				"build rate bonus" 0.5
-				"engy sentry fire rate increased" 0.6
-				"engy sentry radius increased" 5
-				"engy sentry damage bonus" 2
-				"engy building health bonus" 5
+				"move speed bonus"	0.9
 				"damage force reduction"	0.4
 				"airblast vulnerability multiplier"	0.4
 			}
-			}
-						Scout_Public_Enemey_batts
-						{
-							ClassIcon	scout_publicenemy
-							Health	125
-							Name	"Backup Public Enemy Scout"
-							Class	Scout
-							Skill	Hard
-							WeaponRestrictions	PrimaryOnly
-							Attributes	"SpawnWithFullCharge"
-							Item	"Baby Face's Blaster"
-							Item	"The Fed-Fightin' Fedora"
-							Item	"The Battalion's Backup"
-							ItemAttributes
-							{
-								ItemName	"Baby Face's Blaster"
-								"bullets per shot bonus"2
-								"damage bonus"	2
-								"faster reload rate"	0.7
-							}
-							CharacterAttributes
-							{
-								"damage force reduction"	0.5
-								"move speed bonus"	1.2
-								"airblast vulnerability multiplier"	0.5
-								"increase buff duration"	9.0
-							}
-						}
-						Scout_Public_Enemey_buff
-						{
-							ClassIcon	scout_publicenemy
-							Health	125
-							Name	"Buff Public Enemy Scout"
-							Class	Scout
-							Skill	Hard
-							WeaponRestrictions	PrimaryOnly
-							Attributes	"SpawnWithFullCharge"
-							Item	"Baby Face's Blaster"
-							Item	"The Fed-Fightin' Fedora"
-							Item	"The Buff Banner"
-							ItemAttributes
-							{
-								ItemName	"Baby Face's Blaster"
-								"bullets per shot bonus" 2
-								"damage bonus"	2
-								"faster reload rate"	0.7
-							}
-							CharacterAttributes
-							{
-								"damage force reduction"	0.5
-								"move speed bonus"	1.2
-								"airblast vulnerability multiplier"	0.5
-								"increase buff duration HIDDEN"	15
-							}
-						}
-						Datbot_Armored_Caber_Knight
-				{
-					Health	850
-					ClassIcon	demo_caber_nys_armored
-					Scale	1.5
-					Name	"Armored Caber Knight"
-					Class	Demoman
-					Skill	Hard
-					WeaponRestrictions	MeleeOnly
-					Action	Mobber
-					BehaviorModifiers	Mobber
-					Attributes	"IgnoreFlag"
-					Tag	bot_giant
-					Item	"The Buccaneer's Bicorne"
-					Item	"The Ullapool Caber"
-					Item	"The Tide Turner"
-					ItemAttributes
-					{
-						ItemName	"The Ullapool Caber"
-						"damage bonus"	2
-						"blast dmg to self increased"	500
-						"Blast radius increased"	1.5
-					}
-					CharacterAttributes
-					{
-						"move speed bonus"	1.2
-						"damage force reduction" 0.5
-						"airblast vulnerability multiplier" 0.5
-						"charge time increased"	3.5
-					}
-				}
-						Armored_HW_Pyro
-						{
-							ClassIcon	pyro_homewrecker_Lite_armored
-							Health	1200
-							Scale	1.6
-							Name	"Armored Wrecker Pyro"
-							Class	Pyro
-							Skill	Expert
-							WeaponRestrictions	MeleeOnly
-							Item	"The Homewrecker"
-							Item	"The Bolted Birdcage"
-							ItemAttributes
-							{
-								ItemName	"The Homewrecker"
-								"damage bonus"	1.5
-								"damage blast push"	1
-								"damage causes airblast"	1
-								"airblast pushback scale"	3
-								"dmg bonus vs buildings"	4
-							}
-							CharacterAttributes
-							{
-								"move speed bonus"	0.9
-								"damage force reduction"	0.4
-								"airblast vulnerability multiplier"	0.4
-							}
-						}
-						DF_Pyro
-						{
-							ClassIcon	pyro_dragonfury
-							Health	175
-							Name	"Fury Pyro"
-							Class	Pyro
-							Skill	Hard
-							WeaponRestrictions	PrimaryOnly
-							Item	"The Dragon's Fury"
-							CharacterAttributes
-							{
-								"damage force reduction"	0.5
-								"airblast vulnerability multiplier"	0.5
-							}
-						}
-						DF_Pyro_Batts
-						{
-							ClassIcon	pyro_dragon_fury_backup_lite
-							Health	155
-							Name	"Batts Fury Pyro"
-							Class	Pyro
-							Skill	Hard
-							WeaponRestrictions	PrimaryOnly
-							Item	"The Dragon's Fury"
-							Item	"The Battalion's Backup"
-							Attributes	"SpawnWithFullCharge"
-							CharacterAttributes
-							{
-								"damage force reduction"	0.5
-								"airblast vulnerability multiplier"	0.5
-								"increase buff duration HIDDEN" 15
-							}
-						}
-						DF_Pyro_Hyper_Tough
-						{
-							ClassIcon	pyro_dragon_fury_hyper
-							Health	550
-							Name	"Tough Hyper Fury Pyro"
-							Class	Pyro
-							Skill	Hard
-							WeaponRestrictions	PrimaryOnly
-							Item	"The Dragon's Fury"
-							ItemAttributes
-							{
-								ItemName	"The Dragon's Fury"
-								"damage bonus" 2.5
-								"attach particle effect"	13
-								"item_meter_charge_rate" 0.2
-								"ragdolls become ash" 1
-								"ring of fire while aiming" 1
-								"weapon burn dmg increased" 3
-								"flame_drag" 4
-								"weapon burn time increased"	1.5
-							}
-							CharacterAttributes
-							{
-								"damage force reduction"	0.5
-								"airblast vulnerability multiplier"	0.5
-								"move speed bonus" 1.2
-							}
-						}
-
-				Giant_Nuke_Soldier
-				{
-							ClassIcon	soldier_nuke2
-							Health	4200
-							Name	"Giant Nuke Soldier"
-							Class	Soldier
-							Skill	Expert
-							WeaponRestrictions	PrimaryOnly
-							Attributes	"MiniBoss"
-							Attributes	"HoldFireUntilFullReload"
-							Attributes	"AlwaysCrit"
-							ItemAttributes
-							{
-								ItemName	"the black box"
-								"damage bonus"	12
-								"clip size upgrade atomic"	-2
-								"faster reload rate"	2
-								"blast radius increased"	3
-								"use large smoke explosion" 1
-							}
-							CharacterAttributes
-							{
-								"move speed bonus"	0.5
-								"damage force reduction"	0.2
-								"airblast vulnerability multiplier"	0.2
-								"override footstep sound set"	3
-								"Projectile speed increased"	0.5
-							}
-							Item	"the black box"
-							Item	"Furious Fukaamigasa"
-						}
-						Titanium_Nuke_Soldier
-				{
-							ClassIcon	soldier_nuke2
-							Health	9000
-							Name	"Titanium Nuke Soldier"
-							Class	Soldier
-							Skill	Expert
-							WeaponRestrictions	PrimaryOnly
-							Attributes	"MiniBoss"
-							Attributes	"HoldFireUntilFullReload"
-							Attributes	"AlwaysCrit"
-							ItemAttributes
-							{
-								ItemName	"the black box"
-								"damage bonus"	12
-								"clip size upgrade atomic"	-2
-								"faster reload rate"	2
-								"blast radius increased"	2
-								"use large smoke explosion" 1
-								"custom projectile size" 2
-							}
-							CharacterAttributes
-							{
-								"move speed bonus"	0.45
-								"damage force reduction"	0.1
-								"airblast vulnerability multiplier"	0.1
-								"override footstep sound set"	3
-								"Projectile speed increased"	0.4
-							}
-							Item	"the black box"
-							Item	"Furious Fukaamigasa"
-						}
-				Giant_Hyper_Spread_Soldier
-				{
-							ClassIcon	soldier_rocketrain_hyper
-							Health	4200
-							Name	"Giant Hyper Cluster Soldier"
-							Class	Soldier
-							Skill	Expert
-							WeaponRestrictions	PrimaryOnly
-							Attributes	"MiniBoss"
-							Attributes	"HoldFireUntilFullReload"
-							ItemAttributes
-							{
-								ItemName	"TF_WEAPON_ROCKETLAUNCHER"
-								"damage bonus"	2
-								"clip size upgrade atomic"	6
-								"faster reload rate"	0.1
-								"fire rate bonus" 0.01
-								"projectile spread angle penalty" 4
-								"Projectile speed increased HIDDEN" 1.8
-							}
-							CharacterAttributes
-							{
-								"move speed bonus"	0.5
-								"damage force reduction"	0.15
-								"airblast vulnerability multiplier"	0.15
-								"override footstep sound set"	3
-							}
-							Item	"Breach and Bomb"
-						}
-						Soldier_Charged_Conch
-						{
-							ClassIcon	soldier_conch_charged
-							Health	200
-							Name	"Charged Conch Soldier"
-							Class	Soldier
-							Skill	Easy
-							WeaponRestrictions	PrimaryOnly
-							Attributes	"SpawnWithFullCharge"
-							Attributes	"AlwaysCrit"
-							Attributes	"HoldFireUntilFullReload"
-							ItemAttributes
-							{
-								ItemName "The Original"
-								"faster reload rate" 0.2
-								"fire rate bonus" 2
-								"Projectile speed increased" 0.5
-							}
-							CharacterAttributes
-							{
-								"increase buff duration HIDDEN" 9.0
-								"damage force reduction"	0.5
-								"airblast vulnerability multiplier"	0.5
-							}
-							Item	"The Original"
-							Item	"The Concheror"
-						}
-						Soldier_Charged_Conch_Tough
-						{
-							ClassIcon	soldier_conch_charged
-							Health	640
-							Name	"Tough Charged Conch Soldier"
-							Class	Soldier
-							Skill	Easy
-							WeaponRestrictions	PrimaryOnly
-							Attributes	"SpawnWithFullCharge"
-							Attributes	"AlwaysCrit"
-							Attributes	"HoldFireUntilFullReload"
-							ItemAttributes
-							{
-								ItemName "The Original"
-								"faster reload rate" 0.2
-								"fire rate bonus" 2
-								"Projectile speed increased" 0.5
-							}
-							CharacterAttributes
-							{
-								"increase buff duration HIDDEN" 9.0
-								"damage force reduction"	0.5
-								"airblast vulnerability multiplier"	0.5
-							}
-							Item	"The Original"
-							Item	"The Concheror"
-						}
-				Hyper_Sticky_Demo_Spammer
-				{
-					Class Demoman
-					Name "Hyper Rapid Sticky Demoman"
-					Skill Normal
-					ClassIcon demo_sticky_spammer_hyper
-					WeaponRestrictions    SecondaryOnly
-					Item "Bomb Beanie"
-					Item	"Upgradeable TF_WEAPON_GRENADELAUNCHER"
-					Item	"Upgradeable TF_WEAPON_PIPEBOMBLAUNCHER"
-					ItemAttributes
-					{
-						ItemName "Upgradeable TF_WEAPON_GRENADELAUNCHER"
-						"is_passive_weapon" 1
-						"override projectile type" 27
-					}
-					ItemAttributes
-					{
-						ItemName "Upgradeable TF_WEAPON_PIPEBOMBLAUNCHER"
-						"stickybomb charge rate" 0.001
-						"max pipebombs decreased" -5
-						"faster reload rate" -0.8
-						"fire rate bonus" 0.4
-						"Projectile speed increased HIDDEN" 2.5
-						"damage bonus" 3
-						"damage causes airblast" 1
-					}
-					CharacterAttributes
-							{
-								"damage force reduction"	0.4
-								"airblast vulnerability multiplier"	0.4
-								"move speed bonus" 1.2
-							}
-				}
-				Hyper_Burst_Bison_Soldiers
+		}
+		DF_Pyro
+		{
+			ClassIcon	pyro_dragonfury
+			Health	175
+			Name	"Fury Pyro"
+			Class	Pyro
+			Skill	Hard
+			WeaponRestrictions	PrimaryOnly
+			Item	"The Dragon's Fury"
+			CharacterAttributes
 			{
+				"damage force reduction"	0.5
+				"airblast vulnerability multiplier"	0.5
+			}
+		}
+		DF_Pyro_Batts
+		{
+			ClassIcon	pyro_dragon_fury_backup_lite
+			Health	155
+			Name	"Batts Fury Pyro"
+			Class	Pyro
+			Skill	Hard
+			WeaponRestrictions	PrimaryOnly
+			Item	"The Dragon's Fury"
+			Item	"The Battalion's Backup"
+			Attributes	"SpawnWithFullCharge"
+			CharacterAttributes
+			{
+				"damage force reduction"	0.5
+				"airblast vulnerability multiplier"	0.5
+				"increase buff duration HIDDEN" 15
+			}
+		}
+		DF_Pyro_Hyper_Tough
+		{
+			ClassIcon	pyro_dragon_fury_hyper
+			Health	550
+			Name	"Tough Hyper Fury Pyro"
+			Class	Pyro
+			Skill	Hard
+			WeaponRestrictions	PrimaryOnly
+			Item	"The Dragon's Fury"
+			ItemAttributes
+			{
+				ItemName	"The Dragon's Fury"
+				"damage bonus" 2.5
+				"attach particle effect"	13
+				"item_meter_charge_rate" 0.2
+				"ragdolls become ash" 1
+				"ring of fire while aiming" 1
+				"weapon burn dmg increased" 3
+				"flame_drag" 4
+				"weapon burn time increased"	1.5
+			}
+			CharacterAttributes
+			{
+				"damage force reduction"	0.5
+				"airblast vulnerability multiplier"	0.5
+				"move speed bonus" 1.2
+			}
+		}
+
+		Titanium_Nuke_Soldier
+		{
+					ClassIcon	soldier_nuke2
+					Health	9000
+					Name	"Titanium Nuke Soldier"
+					Class	Soldier
+					Skill	Expert
+					WeaponRestrictions	PrimaryOnly
+					Attributes	"MiniBoss"
+					Attributes	"HoldFireUntilFullReload"
+					Attributes	"AlwaysCrit"
+					ItemAttributes
+					{
+						ItemName	"the black box"
+						"damage bonus"	12
+						"clip size upgrade atomic"	-2
+						"faster reload rate"	2
+						"blast radius increased"	2
+						"use large smoke explosion" 1
+						"custom projectile size" 2
+					}
+					CharacterAttributes
+					{
+						"move speed bonus"	0.45
+						"damage force reduction"	0.1
+						"airblast vulnerability multiplier"	0.1
+						"override footstep sound set"	3
+						"Projectile speed increased"	0.4
+					}
+					Item	"the black box"
+					Item	"Furious Fukaamigasa"
+		}
+
+		Hyper_Burst_Bison_Soldiers
+		{
 			ClassIcon	soldier_bison_spammer
 			Health	200
 			Name	"Hyper Burst Bison Soldier"
@@ -1143,7 +869,7 @@ population
 							}
 			Item	"The Righteous Bison"
 			Item	"Thousand-Yard Stare"
-			}
+		}
 				Giant_Heal_Rapid_Homing_Soldier
 				{
 							ClassIcon	soldier_heal_homing_spammer
