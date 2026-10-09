@@ -595,6 +595,7 @@ WaveSchedule
 				TFBot
 				{
 					Template	T_TFBot_Giant_Medic_Shield_Extended_QuickHeal
+					ClassIcon	medic_quickfix_shield_ala_giant
 				}
 			}
 		}
@@ -652,6 +653,7 @@ WaveSchedule
 				TFBot
 				{
 					Template	T_TFBot_Giant_Medic_Shield_Extended_QuickHeal
+					ClassIcon	medic_quickfix_shield_ala_giant
 				}
 			}
 		}
@@ -747,6 +749,7 @@ WaveSchedule
 				TFBot
 				{
 					Template	T_TFBot_Giant_Medic_Shield_Extended_QuickHeal
+					ClassIcon	medic_quickfix_shield_ala_giant
 				}
 				TFBot
 				{
@@ -776,6 +779,7 @@ WaveSchedule
 				TFBot
 				{
 					Template	T_TFBot_Giant_Medic_Shield_Extended_QuickHeal
+					ClassIcon	medic_quickfix_shield_ala_giant
 				}
 				TFBot
 				{
@@ -1198,6 +1202,7 @@ WaveSchedule
 				TFBot
 				{
 					Template	T_TFBot_Giant_Medic
+					ClassIcon	medic_pop
 				}
 			}
 		}
@@ -1222,6 +1227,7 @@ WaveSchedule
 				TFBot
 				{
 					Template	T_TFBot_Giant_Medic
+					ClassIcon	medic_pop
 				}
 			}
 		}
@@ -1246,6 +1252,7 @@ WaveSchedule
 				TFBot
 				{
 					Template	T_TFBot_Giant_Medic
+					ClassIcon	medic_pop
 				}
 			}
 		}
@@ -1270,6 +1277,7 @@ WaveSchedule
 				TFBot
 				{
 					Template	T_TFBot_Giant_Medic
+					ClassIcon	medic_pop
 				}
 			}
 		}
@@ -1687,6 +1695,7 @@ WaveSchedule
 				TFBot
 				{
 					Template	T_TFBot_Giant_Medic_Shield_Extended_QuickHeal
+					ClassIcon	medic_quickfix_shield_ala_giant
 				}
 			}
 		}

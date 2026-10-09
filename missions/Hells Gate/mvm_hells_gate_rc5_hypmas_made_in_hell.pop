@@ -2072,7 +2072,7 @@ WaveSchedule
 				{
 					Target "!self"
 					Action "RunScriptCode"
-					Param "ClientPrint(null, 3, `\x0799CCFFSinful Emperor Wrath \x07FFFFFFwill lock their selected banner at \x07FF3F3F70% (70,000) \x07FFFFFFHP. The Buff Banner will provide increased weapon handling, and the Concheror will provide a minor speed boost.`);"
+					Param "ClientPrint(null, 3, `\x0799CCFFSinful Emperor Wrath \x07FFFFFFwill lock their selected banner at \x07FF3F3F70% (70,000) \x07FFFFFFHP. The Buff Banner will provide increased weapon handling, and the Concheror will provide a minor speed boost at the cost of taking mini-crits.`);"
 					Delay 0
 					Repeats 1
 				}
@@ -2175,6 +2175,7 @@ WaveSchedule
 										sc.keepBuff <- true;
 										sc.keepConch <- false;
 										self.RemoveCond(29);
+										self.RemoveCond(30);														// Temp change
 										sc.KeepBuff <- function() {													// Repeatedly apply increased weapon handling
 											local s = self.GetScriptScope();										// if we cross to using spells. This block
 											if(!(`keepBuff` in s) || !s.keepBuff) return;							// defines the function itself.
@@ -2191,6 +2192,7 @@ WaveSchedule
 											local s=self.GetScriptScope();
 											if(!(`keepConch` in s) || !s.keepConch) return;
 											self.AddCond(29);
+											self.AddCond(30);														// Temp change
 											EntFireByHandle(self,`RunScriptCode`,`KeepConch()`,0.10,self,self);
 										};
 										sc.KeepConch();
