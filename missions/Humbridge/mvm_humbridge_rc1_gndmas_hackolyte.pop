@@ -784,7 +784,7 @@ WaveSchedule
 			TFBot
 			{
 				Template T_TFBot_Scout_Bonk_Fast
-				Attributes AlwaysCrit
+				// Attributes AlwaysCrit
 			}
 		}
 		WaveSpawn
@@ -1069,7 +1069,7 @@ WaveSchedule
 			TFBot
 			{
 				Template T_TFBot_Scout_Bonk_Fast
-				Attributes	AlwaysCrit
+				// Attributes	AlwaysCrit
 			}
 		}
 		WaveSpawn
@@ -1216,7 +1216,7 @@ WaveSchedule
 		}
 
 		// Subwave 2 (maxActive: 22)
-		// Colonel Barrage + Armored Kritzkrieg Medic (9)
+		// Colonel Barrage + Armored Kritzkrieg Medic (12 -> 9 in practice, avoids stalling)
 		// Giant Brass Heavy + Shield Uber Medic (4)
 		// Extended Backup Soldier + Shield Uber Medic (8)
 		
@@ -1233,8 +1233,8 @@ WaveSchedule
 			Name "wave03bGiant"
 			Where spawnbot_tank
 			TotalCount 12
-			MaxActive 9
-			SpawnCount 1
+			MaxActive 12
+			SpawnCount 3
 			WaitForAllSpawned "wave03aGiant"
 			WaitBeforeStarting 5
 			WaitBetweenSpawns 8
@@ -1382,7 +1382,7 @@ WaveSchedule
 			Where spawnbot_tank
 			MaxActive 5
 			SpawnCount 1
-			WaitForAllSpawned "wave03b"
+			WaitForAllSpawned "wave03c"
 			WaitBeforeStarting 10
 			WaitBetweenSpawns 1
 			TotalCurrency 50
@@ -1421,12 +1421,12 @@ WaveSchedule
 		{
 			Name "wave03cSupport"
 			Where spawnbot
-			MaxActive 9
+			MaxActive 3
 			SpawnCount 1
-			WaitForAllSpawned "wave03b"
+			WaitForAllSpawned "wave03c"
 			WaitBeforeStarting 10
 			WaitBetweenSpawns 2
-			TotalCurrency 50
+			TotalCurrency 25
 			Support 1
 		
 			TFBot
@@ -1567,7 +1567,7 @@ WaveSchedule
 		// Subwave 2 (maxActive: 22)
 		// Giant Hyper Banners + Shield Uber Medic (6)
 		// Samurai Demo (8)
-		// Crit Heal-on-Hit Dragon Pyro (Hard variant) (8)
+		// Heal-on-Hit Dragon Pyro (Hard variant) (8)
 
 		// This subwave is quite anti-shield-oriented without
 		// the use of unavoidable instant-kills, if resistances
@@ -1679,17 +1679,18 @@ WaveSchedule
 			WaitBeforeStarting 8
 			WaitBetweenSpawns 3
 			TotalCurrency 25
-		
+			Support Limited
+
 			TFBot
 			{
-				Template T_TFBot_Demoman_Samurai
+				Template T_TFBot_Scout_Shortstop_Strong
 			}
 		}
 		WaveSpawn	// 
 		{
 			Name "wave04b"
 			Where spawnbot_tank
-			TotalCount 16
+			TotalCount 14
 			MaxActive 8
 			SpawnCount 1
 			WaitForAllDead "wave04a"
@@ -1699,17 +1700,16 @@ WaveSchedule
 		
 			TFBot
 			{
-				Template T_TFBot_Pyro_Dragon_Heal_Hard
+				Template T_TFBot_Pyro_Dragon_Heal
 				Skill	Expert
-				Attributes	AlwaysCrit
 			}
 		}
 
 		// Subwave 3 (maxActive: 22)
 		// Giant Crit Heal-on-Hit Dragon Pyro + Shield Uber Medic (4)
-		// Crit Blast Soldier (6)
+		// Strong Shortstop Scout (4)
 		// Dragon Pyro (4)
-		// Crit Penetrator Bowman [4]
+		// Penetrator Bowman [6]
 
 		// This subwave uses a tiny tank train (2 tanks) to force
 		// RED back. The Giant Heal-on-Hit Dragon Pyros dish out
@@ -1835,9 +1835,9 @@ WaveSchedule
 		
 			TFBot
 			{
-				Template T_TFBot_Pyro_Dragon_Heal_Hard
+				Template T_TFBot_Pyro_Dragon_Heal
 				Skill	Expert
-				Attributes	AlwaysCrit
+				// Attributes	AlwaysCrit
 			}
 		}
 		WaveSpawn	// 
@@ -1872,7 +1872,6 @@ WaveSchedule
 			TFBot
 			{
 				Template T_TFBot_Sniper_Huntsman_Penetration
-				Attributes AlwaysCrit
 			}
 		}
 		
@@ -2092,7 +2091,7 @@ WaveSchedule
 		}
 
 		// Subwave 3 (maxActive: 20)
-		// Giant Crit Deflector Heavy + Giant Shield Uber Medic (4)
+		// Giant Deflector Heavy + Giant Shield Uber Medic (4)
 		// Crit Concheror Soldier [12]
 		// Hyper Pyro [4]
 
@@ -2118,7 +2117,7 @@ WaveSchedule
 				TFBot
 				{
 					Template T_TFBot_Giant_Heavyweapons_Deflector
-					Attributes	AlwaysCrit
+					// Attributes	AlwaysCrit
 					CharacterAttributes
 					{
 						"damage force reduction" 0.25

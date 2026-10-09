@@ -27,7 +27,7 @@ WaveSchedule
 	RespawnWaveTime 				7
 	CanBotsAttackWhileInSpawnRoom	No
 
-	PointTemplates
+	PointTemplates [$SIGSEGV]
 	{
 		MissionNamePT
 		{
@@ -42,7 +42,7 @@ WaveSchedule
 		}
 	}
 
-	SpawnTemplate "MissionNamePT"
+	SpawnTemplate "MissionNamePT" [$SIGSEGV]
 
 	Mission // Spy - wave 4
 	{
@@ -451,7 +451,7 @@ WaveSchedule
 		
 			TFBot
 			{
-				Template T_TFBot_Giant_Scout_FAN_Anchored
+				Template T_TFBot_Giant_Scout_FAN_Sturdy
 			}
 		}
 		WaveSpawn	// Giant Soldier Support: Demoman

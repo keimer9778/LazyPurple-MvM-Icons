@@ -470,7 +470,7 @@ WaveSchedule
 				"OnTrigger" "player,$PlaySoundToSelf,misc/doomsday_missile_explosion.wav,7.4,-1"
 				"OnTrigger" "player,SetHUDVisibility,0,7.5,-1"
 				"OnTrigger" "kaboom,Start,,7.4,-1"
-				"OnTrigger" "PlayerRunScriptCodeScreenFade(null, 0, 0, 0, 255, 2, 2, 1)7.53-1"
+				///"OnTrigger" "PlayerRunScriptCodeScreenFade(null, 0, 0, 0, 255, 2, 2, 1)7.53-1"
 				"OnTrigger" "fire,Start,,7.5,-1"
 				"OnTrigger" "smoke,Start,,7.5,-1"
 				"OnTrigger" "worldspawn,runscriptcode,SetSkyboxTexture(`sky_day01_09`),7.75,-1"
@@ -551,11 +551,6 @@ WaveSchedule
                 Target "Prefight"
                 Action Trigger
             }
-            // info_target
-            // {
-            //     "targetname" "boss_spawn"
-            //     "origin" "3793 -1536 704"
-            // }
 			info_particle_system
 			{
 				"TargetName" "vortexy"
@@ -921,11 +916,11 @@ WaveSchedule
 			logic_relay
 			{
 				"targetname" "Prefight"
-				"OnTrigger" "tf_objective_resource,$SetClientProp$m_iszMvMPopfileName,TORRENTIAL DOWNPOUR,0.1,-1"
+				"OnTrigger" "tf_objective_resource,$SetClientProp$m_iszMvMPopfileName,TORRENTIAL DOWNPOUR,0,-1"
 				"OnTrigger" "watah,enable,,0.1,-1"
 				"OnTrigger" "raining,Start,,1,-1"
-				"OnTrigger" "rainingambi,playsound,,1,-1"
-				"OnTrigger" "Thundernoises,Enable,,1,-1"
+				"OnTrigger" "rainingambi,playsound,,1.1,-1"
+				"OnTrigger" "Thundernoises,Enable,,1.2,-1"
 			}
 			logic_relay
 			{
@@ -1245,6 +1240,7 @@ WaveSchedule
 				"OnTrigger"	"tf_gamerules,PlayVO,vo/mvm/mght/soldier_mvm_m_cheers01.mp3,0,-1"
 				"OnTrigger" "!activator,$AddCond,51,0"
 				"OnTrigger" "!activator,$AddCond,73,4"
+				"OnTrigger" "!activator,$RemoveCond,73,34"
 			}
 			logic_relay
 			{
@@ -1952,6 +1948,11 @@ WaveSchedule
 			logic_relay
 			{
 				"targetname" "deathanimation"
+				"OnTrigger" "fire,Stop,,0.1,-1"
+				"OnTrigger" "smoke,Stop,,0.1,-1"
+				"OnTrigger" "raining,Stop,,0.1,-1"
+				"OnTrigger" "rainingambi,stopsound,,1.1,-1"
+				"OnTrigger" "Thundernoises,Disable,,1.2,-1"
 				"OnTrigger" "tf_objective_resource,$SetClientProp$m_iszMvMPopfileName,CLAIMED BY THE DOWNPOUR ,0.1,-1"
 				"OnTrigger" "johnex_loop,Fadeout,0,-1"
 				"OnTrigger" "johnex_loop,Stopsound,0.3,-1"
@@ -1980,12 +1981,11 @@ WaveSchedule
 				"OnTrigger" "player,$PlaySoundToSelf,vo\mvm\mght\soldier_mvm_m_paincrticialdeath04.mp3,5.5,-1" 
 				"OnTrigger" "shockingdeath1,start,,7,-1"
 				"OnTrigger" "shockingdeath1,stop,,8,-1"
-				"OnTrigger" "PlayerRunScriptCodeScreenFade(null, 255, 255, 255, 255, 2, 1.5, 2)4.8-1"
+				///"OnTrigger" "PlayerRunScriptCodeScreenFade(null, 255, 255, 255, 255, 2, 1.5, 2)4.8-1"
 				"OnTrigger" "Ex_down,kill,,7.1,-1"
 				"OnTrigger" "charge,start,,2.8,-1"
-				"OnTrigger" "charge,stop,,7,-1"
+				"OnTrigger" "charge,stop,,6.9,-1"
 				"OnTrigger" "finalrumble,StartShake,,7,-1"
-				"OnTrigger" "shockwave,start,,7,-1"
 				"OnTrigger" "player,$PlaySoundToSelf,npc/turret_floor/die.wav,7,-1"
 				"OnTrigger" "player,$PlaySoundToSelf,mvm\mvm_tank_end.wav,7,-1"
 				"OnTrigger" "player,$PlaySoundToSelf,mvm\mvm_tank_explode.wav,7,-1"
@@ -2020,21 +2020,6 @@ WaveSchedule
 				"origin" "0 0 0"
 				"angles" "-90 0 0"
 				"effect_name" "rd_robot_explosion"
-			}
-			KeepAlive 1
-			info_particle_system
-			{
-				"targetname" "explosion3"
-				"origin" "0 0 0"
-				"angles" "-90 0 0"
-				"effect_name" "fireSmoke_collumn_mvmAcres"
-			}
-			info_particle_system
-			{
-				"targetname" "shockwave"
-				"origin" "0 0 0"
-				"angles" "-90 0 0"
-				"effect_name" "hammer_bell_ring_shockwave"
 			}
 			KeepAlive 1
 			ambient_generic
@@ -3719,7 +3704,7 @@ WaveSchedule
             Target wave_start_relay
             Action RunScriptCode
             Param "
-			EntFire(`tf_objective_resource`, `$SetClientProp$m_iszMvMPopfileName`, `(Hypermaster) Major Draft`)
+			EntFire(`tf_objective_resource`, `$SetClientProp$m_iszMvMPopfileName`, `Major Draft (HYPMAS) `)
 				::BirdspotSkyBox <- { 
                 Cleanup = function() {
              SetSkyboxTexture(`sky_day01_05`)
@@ -5066,7 +5051,7 @@ WaveSchedule
 				Item "The Flare Gun"
 				CharacterAttributes
 				{
-					"move speed bonus" 1.20
+					"move speed bonus" 1.25
 				}
 				ItemAttributes
 				{
@@ -6034,10 +6019,7 @@ WaveSchedule
 				EntFire(`where spawnbot_invasion`, `Disable`)
 				EntFire(`where spawnbot_flank`, `Disable`)
 				EntFire(`where spawnbot_side`, `Disable`)
-				SINS.ChangeIconFlags(`demo_caber_nuke`,0)
-				SINS.ChangeIconFlags(`scout_blaster_nys_hyper`,0)
-				SINS.ChangeIconFlags(`medic_jug_ubersaw`,0)
-				SINS.ChangeIconFlags(`sniper_bow_multi_bleed_penetrator`,0)
+				SINS.ChangeIconFlags(`random_lite`,0)
 				"
             }
 		}
@@ -6469,7 +6451,6 @@ WaveSchedule
 				Target BigNet
 				Action RunScriptCode
 				Param "
-				SINS.ChangeIconFlags(`chief_captain_soldier_blue_nys`,0)
 				SINS.ChangeIconFlags(`timer_lite`,0)
 				SINS.ChangeIconFlags(`random_lite`,0)
 				SINS.ChangeIconFlags(`random_lite_giant_hyper`,0)
