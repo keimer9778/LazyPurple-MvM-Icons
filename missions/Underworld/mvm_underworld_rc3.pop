@@ -13,9 +13,8 @@ WaveSchedule
 	FixedRespawnWaveTime Yes
 	CanBotsAttackWhileInSpawnRoom No
 	EventPopfile Halloween
-	Advanced 0
 
-	PointTemplates
+	PointTemplates [$SIGSEGV]
 	{
 		MissionNamePT
 		{
@@ -30,7 +29,7 @@ WaveSchedule
 		}
 	}
 
-	SpawnTemplate "MissionNamePT"
+	SpawnTemplate "MissionNamePT" [$SIGSEGV]
 	
 	Templates
 	{
@@ -39,7 +38,7 @@ WaveSchedule
 			Name "Burning Demoknight"
 			Class Demoman
 			Skill Expert
-			ClassIcon demoman_fireknight
+			ClassIcon demoknight_fire
 			WeaponRestrictions MeleeOnly
 			Item "The Chargin' Targe"
 			Item "The Eyelander"
@@ -654,7 +653,7 @@ WaveSchedule
 				Template T_TFBot_Sniper_Huntsman
 				Skill Expert
 				Item "Larrikin Robin"
-				Item "Huntsman's Essentials"
+				Item "The Huntsman's Essentials"
 			}
 		}
 		WaveSpawn
